@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBusBasics.Contracts", "NServiceBusBasics.Contracts\NServiceBusBasics.Contracts.csproj", "{FBA2C1C3-3629-4F5A-975B-4A175625C6C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBusBasics.Sender", "NServiceBusBasics.Sender\NServiceBusBasics.Sender.csproj", "{F09F01B9-CFF7-4E41-A357-7ED70A99D839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBusBasics.Receiver", "NServiceBusBasics.Receiver\NServiceBusBasics.Receiver.csproj", "{D11DD488-2256-4B9D-BD14-07E454AA9077}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A214747-1C52-4182-A3FE-7C512DB3B489}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBA2C1C3-3629-4F5A-975B-4A175625C6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA2C1C3-3629-4F5A-975B-4A175625C6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA2C1C3-3629-4F5A-975B-4A175625C6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA2C1C3-3629-4F5A-975B-4A175625C6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F09F01B9-CFF7-4E41-A357-7ED70A99D839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F09F01B9-CFF7-4E41-A357-7ED70A99D839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F09F01B9-CFF7-4E41-A357-7ED70A99D839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F09F01B9-CFF7-4E41-A357-7ED70A99D839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11DD488-2256-4B9D-BD14-07E454AA9077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11DD488-2256-4B9D-BD14-07E454AA9077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11DD488-2256-4B9D-BD14-07E454AA9077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11DD488-2256-4B9D-BD14-07E454AA9077}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

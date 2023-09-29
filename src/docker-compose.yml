@@ -1,0 +1,32 @@
+﻿services:
+  sender:
+    image: sender
+    build:
+      context: .
+      dockerfile: NServiceBusBasics.Sender/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+  receiver:
+    image: receiver
+    build:
+      context: .
+      dockerfile: NServiceBusBasics.Receiver/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+  
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_LOGS='-'
+      - RABBITMQ_SASL_LOGS='-'
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5 
