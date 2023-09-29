@@ -7,12 +7,22 @@
     depends_on:
       rabbitmq:
         condition: service_healthy
+        
   receiver:
     image: receiver
     build:
       context: .
       dockerfile: NServiceBusBasics.Receiver/Dockerfile
     depends_on:
+      rabbitmq:
+        condition: service_healthy
+        
+  spy:
+    image: spy
+    build:
+      context: .
+      dockerfile: NServiceBusBasics.Spy/Dockerfile
+    depends_on: 
       rabbitmq:
         condition: service_healthy
   

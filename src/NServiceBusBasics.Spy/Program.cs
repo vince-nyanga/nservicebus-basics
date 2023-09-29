@@ -1,4 +1,4 @@
-﻿using NServiceBusBasics.Receiver;
+﻿using NServiceBusBasics.Spy;
 
 var endpointConfiguration = EndpointConfigurationFactory.Create();
 

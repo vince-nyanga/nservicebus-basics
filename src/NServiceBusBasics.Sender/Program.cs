@@ -5,14 +5,14 @@ var endpointConfiguration = EndpointConfigurationFactory.Create();
 
 var endpointInstance = await Endpoint.Start(endpointConfiguration);
 
-for (var i = 0; i < 5; i++)
+while (true)
 {
     var command = new CreateOrder()
     {
         OrderId = Guid.NewGuid()
     };
-    Console.WriteLine($"Send CreatOrder command {command.OrderId}");
+    Console.WriteLine($"Sending CreateOrder command {command.OrderId}");
     await endpointInstance.Send(command);
-}
 
-await endpointInstance.Stop();
+    await Task.Delay(3000);
+}
