@@ -1,3 +1,4 @@
+using NServiceBus;
 using NServiceBusBasics.Contracts.Events;
 
 namespace NServiceBusBasics.Spy.Handlers;

@@ -1,13 +1,16 @@
-﻿using NServiceBusBasics.Contracts.Commands;
+﻿using NServiceBus;
+using NServiceBusBasics.Contracts.Commands;
 using NServiceBusBasics.Sender;
 
-var endpointConfiguration = EndpointConfigurationFactory.Create();
+
+var endpointConfiguration = new SenderEndpointConfigurationFactory()
+    .Create();
 
 var endpointInstance = await Endpoint.Start(endpointConfiguration);
 
 while (true)
 {
-    var command = new CreateOrder()
+    var command = new CreateOrder
     {
         OrderId = Guid.NewGuid()
     };

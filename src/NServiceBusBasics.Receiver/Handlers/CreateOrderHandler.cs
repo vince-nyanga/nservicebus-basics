@@ -1,3 +1,4 @@
+using NServiceBus;
 using NServiceBusBasics.Contracts.Commands;
 using NServiceBusBasics.Contracts.Events;
 using NServiceBusBasics.Contracts.Messages;

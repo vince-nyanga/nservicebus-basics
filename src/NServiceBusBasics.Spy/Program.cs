@@ -1,10 +1,12 @@
-﻿using NServiceBusBasics.Spy;
+﻿using NServiceBus;
+using NServiceBusBasics.Spy;
 
-var endpointConfiguration = EndpointConfigurationFactory.Create();
+var endpointConfiguration = new SpyEndpointConfigurationFactory()
+    .Create();
 
 await Endpoint.Start(endpointConfiguration);
 
 while (true)
 {
-    // to keep application running
+    // to keep application running...
 }

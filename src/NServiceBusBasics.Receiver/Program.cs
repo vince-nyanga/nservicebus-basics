@@ -1,6 +1,8 @@
-﻿using NServiceBusBasics.Receiver;
+﻿using NServiceBus;
+using NServiceBusBasics.Receiver;
 
-var endpointConfiguration = EndpointConfigurationFactory.Create();
+var endpointConfiguration = new ReceiverEndpointConfigurationFactory()
+    .Create();
 
 await Endpoint.Start(endpointConfiguration);
 

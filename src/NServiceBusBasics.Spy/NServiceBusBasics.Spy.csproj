@@ -7,15 +7,9 @@
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
-
+    
     <ItemGroup>
-        <PackageReference Include="NServiceBus" Version="8.1.3" />
-        <PackageReference Include="NServiceBus.Newtonsoft.Json" Version="3.0.0" />
-        <PackageReference Include="NServiceBus.RabbitMQ" Version="8.0.3" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\NServiceBusBasics.Contracts\NServiceBusBasics.Contracts.csproj" />
+      <ProjectReference Include="..\NServiceBusBasics.Shared\NServiceBusBasics.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>

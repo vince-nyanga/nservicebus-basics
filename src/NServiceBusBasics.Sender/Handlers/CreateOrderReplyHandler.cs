@@ -1,3 +1,4 @@
+using NServiceBus;
 using NServiceBusBasics.Contracts.Messages;
 
 namespace NServiceBusBasics.Sender.Handlers;
